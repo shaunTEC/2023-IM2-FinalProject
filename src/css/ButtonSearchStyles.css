@@ -1,0 +1,14 @@
+.search-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    
+  }
+  
