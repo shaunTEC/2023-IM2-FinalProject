@@ -1,0 +1,13 @@
+.button-search {
+    background-color: #EB8531;
+    border-color: #EB8531;
+}
+
+.button-search:hover {
+    background-color: #FFA94D;
+    border-color: #FFA94D;
+}
+
+.button-search:active {
+    background-color: #FFA94D;
+}

@@ -1,30 +1,42 @@
+import React from 'react';
 import { Container, Nav, Navbar, NavDropdown, Form} from 'react-bootstrap';
-//import ButtonSearch from './ButtonSearch';
 import '../css/NavbarStyles.css';
+//assests
+import ButtonSearch from './ButtonSearch';
 
 function DualNavbar() { 
   return (
     <>
+    
+
     <Navbar fixed="top" expand="lg" className="bg-body-tertiary firstNavbar">
       <Container>
         <Navbar.Brand href="#home">ByteWorks</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavDropdown title="Category" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">CPU</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">CPU Cooler</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Memory</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">SSD</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5">PSU</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.6">GPU</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.7">Chassis</NavDropdown.Item>
-            </NavDropdown>
-            <Form className="d-flex">
-              <Form.Control type="text" placeholder="Search" />
+            <Form className="d-flex align-items-center">
+              <NavDropdown title="Category" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">CPU</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">CPU Cooler</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Memory</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">SSD</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.5">PSU</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.6">GPU</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.7">Chassis</NavDropdown.Item>
+              </NavDropdown>
+
+              <span className="mx-3">|</span>
+
+              <Form.Control type="text" placeholder="Search Product" className="mr-2" />
               <ButtonSearch />
-              {/* <Button variant="outline-success">Search</Button> */}
             </Form>
+          </Nav>
+
+          <Nav className="ms-auto">
+            <Nav.Link href="#login">
+                Login
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
